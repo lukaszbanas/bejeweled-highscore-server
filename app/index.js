@@ -27,4 +27,4 @@ wss.on('connection', ws => {
     ws.send(list.get());
 });
 
-server.listen(3000)
+server.listen(80)
