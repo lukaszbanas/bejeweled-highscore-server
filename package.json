@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "npm run-script build && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "",
