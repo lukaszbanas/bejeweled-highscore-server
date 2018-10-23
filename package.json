@@ -2,10 +2,10 @@
   "name": "bejeweled-highscore-server",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "app/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "npm run-script build && node dist/index.js",
+    "start": "npm run-script build && node app/index.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "",
