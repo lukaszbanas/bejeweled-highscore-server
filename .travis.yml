@@ -1,7 +1,10 @@
 language: node_js
 sudo: false
 node_js:
-  - "10"
+- '10'
 branches:
   only:
   - master
+deploy:
+  api_key:
+    secure: ynUtyUDwiyKNLParNRzlUrDzfoMGPv/TVv5Iz9rYOHUqCLG1bZALfMvq1q8x7NJ0hAO8jhj1N/WjnOEYh5EN93PFjHuNYpSRbd9y2ykeUDGetwSlAP508dsIoQhIHkmAmVw0WJSIF+2l9H+avOBpxhGAdzqFh9/gvTy3uiad3og0ks9JkHdjJa2oYF0YuB3DzojurF8Nt5pJqJwElAwVr8zKYbaLTSQRd0C4toMd657NNV8J29FHhkEQfNCVqO5/u6Y52Ogju3+W+wqRyR2GNMiMyG4wNnmWyJq07zSDftfqd4Nht8FOMdLjVN/7YAePnBoeYmWVbptxBBj/yHD5Vqvcgf6jZRsHgk8sZS70Y742mVEms/2Ppa2iUkVU7TMWJjxPoVkUF5coth9I8MCxcN8eDb/WjMsewbR4E668L4GjyTp2Q+UMy7g1zT8wiiNv3ye9ZCKNrQ0BByLcnciUszx2aBDqcvXwCiwaDLKKwNVKtmsabqjdHJGa/axh1P3UMjs9g8wF7TwSEiGGnjC2CN17MTjnMao+3K5g6VNiZP4Clx6//3qKEfS4fHv6/wlMkfLIKgxw6mFmng7qPFoHh8vjH/5ibrAu5VOCPrFf022IGxPusmDGR5eGqsu7hzupIFKn4c1514BQiJyfd7bnqKXRbX2B4TdxWTkRWPoxdGg=
