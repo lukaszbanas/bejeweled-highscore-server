@@ -5,6 +5,8 @@ node_js:
 branches:
   only:
   - master
+install:
+  - npm run build
 deploy:
   provider: heroku
   api_key:

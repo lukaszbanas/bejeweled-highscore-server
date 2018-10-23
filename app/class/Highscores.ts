@@ -1,5 +1,5 @@
 import {Score} from "../types/Score";
-const sqlite = require('sqlite3')
+const sqlite = require('sqlite3');
 
 export class Highscores {
     public list: Array<Score>;
@@ -11,7 +11,8 @@ export class Highscores {
     protected loadData () {
         return new Promise(function(resolve, reject) {
             let db = new sqlite.Database('./scores.sqlite');
-            db.all('SELECT name,score FROM Scores ORDER BY score DESC', [], (error, result) => {
+            db.all('SELECT name,score FROM Scores ORDER BY score DESC', [], (parameters: { error: any, result: any }) => {
+                let {error, result} = parameters;
                 resolve(result);
             });
             db.close()
@@ -20,6 +21,7 @@ export class Highscores {
 
     public async load () {
         await this.loadData().then(result => {
+            // @ts-ignore
             this.list = result;
         });
     }
