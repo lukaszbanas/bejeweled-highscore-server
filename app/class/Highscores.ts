@@ -11,8 +11,8 @@ export class Highscores {
     protected loadData () {
         return new Promise(function(resolve, reject) {
             let db = new sqlite.Database('./scores.sqlite');
-            db.all('SELECT name,score FROM Scores ORDER BY score DESC', [], (parameters: { error: any, result: any }) => {
-                let {error, result} = parameters;
+            // @ts-ignore
+            db.all('SELECT name,score FROM Scores ORDER BY score DESC', [], (error, result) => {
                 resolve(result);
             });
             db.close()
