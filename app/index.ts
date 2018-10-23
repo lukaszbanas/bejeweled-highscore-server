@@ -12,18 +12,18 @@ list.load();
 
 wss.on('connection', ws => {
   ws.on('message', scoreStr => {
-    let data = JSON.parse(typeof scoreStr === "string" ? scoreStr : '')
+    let data = JSON.parse(typeof scoreStr === "string" ? scoreStr : '');
 
-    list.add({ 'name': data.name, 'score': data.score })
+    list.add({ 'name': data.name, 'score': data.score });
 
     wss.clients.forEach(function each (client) {
       if (client.readyState === WebSocket.OPEN) {
         client.send(list.get()) // send updated list to clients
       }
     })
-  })
+  });
 
   ws.send(list.get())
-})
+});
 
-server.listen(process.env.PORT || 3000)
+server.listen(process.env.PORT || 3000);
